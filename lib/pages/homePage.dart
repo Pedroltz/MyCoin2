@@ -13,19 +13,37 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-
+  // Variável para controlar a página atual exibida
   int paginaAtual = 0;
   late PageController pc;
 
   @override
   void initState() {
     super.initState();
+    // Inicializa o controlador da página com a página atual
     pc = PageController(initialPage: paginaAtual);
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: Image.asset(
+          "assets/img/MyCoinPNG.png",
+          width: 120,
+        ),
+        backgroundColor: Colors.red,
+      ),
+      body: PageView(
+        physics: const NeverScrollableScrollPhysics(),
+        controller: pc,
+        children: const [
+          GuidePage(),
+          CalcPage(),
+          SearchPage()
+        ],
+      ),
       bottomNavigationBar: SizedBox(
         height: 73,
         child: GNav(
@@ -36,12 +54,14 @@ class _HomePageState extends State<HomePage> {
           color: Colors.black,
           gap: 8,
           tabs: [
+            // Botões de navegação na parte inferior
             GButton(
               icon: Icons.home,
               text: 'Home',
               onPressed: () {
                 setState(() {
                   paginaAtual = 0;
+                  // Anima a transição para a página atual
                   pc.animateToPage(paginaAtual, duration: const Duration(milliseconds: 200), curve: Curves.linear);
                 });
               },
@@ -88,22 +108,6 @@ class _HomePageState extends State<HomePage> {
             ),
           ],
         ),
-      ),
-      appBar: AppBar(
-        centerTitle: true,
-        title: Image.asset(
-          "assets/img/MyCoinPNG.png",
-          width: 120,
-        ),
-        backgroundColor: Colors.red,
-      ),
-      body: PageView(
-        controller: pc,
-        children: const [
-          GuidePage(),
-          CalcPage(),
-          SearchPage()
-        ],
       ),
     );
   }

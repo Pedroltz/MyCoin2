@@ -12,7 +12,7 @@ class _GuidePageState extends State<GuidePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text("Oi"),
+      body: Text("Guide"),
     );
   }
 }

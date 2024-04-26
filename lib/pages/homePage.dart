@@ -2,7 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:my_coin2/pages/calcPage.dart';
 import 'package:my_coin2/pages/guidePage.dart';
-import 'package:my_coin2/pages/searchPage.dart';
+import 'package:my_coin2/pages/hitsPage.dart';
+import 'package:my_coin2/pages/homeHomePage.dart';
+import 'package:my_coin2/pages/infoPage.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
 class HomePage extends StatefulWidget {
@@ -39,9 +41,11 @@ class _HomePageState extends State<HomePage> {
         physics: const NeverScrollableScrollPhysics(),
         controller: pc,
         children: const [
+          HomeHome(),
           GuidePage(),
           CalcPage(),
-          SearchPage()
+          HitsPage(),
+          InfoPage()
         ],
       ),
       bottomNavigationBar: SizedBox(
@@ -101,7 +105,7 @@ class _HomePageState extends State<HomePage> {
               text: 'info',
               onPressed: () {
                 setState(() {
-                  paginaAtual = 3;
+                  paginaAtual = 4;
                   pc.animateToPage(paginaAtual, duration: const Duration(milliseconds: 200), curve: Curves.linear);
                 });
               },

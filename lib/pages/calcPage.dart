@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class CalcPage extends StatefulWidget {
   const CalcPage({super.key});
@@ -10,6 +11,8 @@ class CalcPage extends StatefulWidget {
 class _CalcPageState extends State<CalcPage> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      body: Text("Calculator"),
+    );
   }
 }

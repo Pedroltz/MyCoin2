@@ -55,7 +55,7 @@ class _HomePageState extends State<HomePage> {
           tabBackgroundColor: Color.fromARGB(255, 248, 93, 82),
           activeColor: Colors.white,
           padding: EdgeInsets.all(16),
-          color: Colors.black,
+          color: Color.fromARGB(255, 119, 0, 0),
           gap: 8,
           tabs: [
             // Botões de navegação na parte inferior

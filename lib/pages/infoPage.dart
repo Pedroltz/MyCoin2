@@ -125,28 +125,35 @@ class _InfoPageState extends State<InfoPage> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 10, bottom: 10),
-              child: ExpansionTile(
-                title: const Text(
-                  "Créditos",
-                  style: TextStyle(
-                    fontFamily: 'Bree'
-                  ),
-                ),
-                children: [
-                  Builder(builder: (BuildContext context) {
-                    return Container(
-                      padding: const EdgeInsets.all(16),
-                      alignment: Alignment.centerLeft,
-                      child: const Text(
-                        "Projeto idealizado pelo professor Fred de Ciencias Contabeis e auxiliado pelo professor Elvio",
-                        textAlign: TextAlign.center,
-                      ),
-                    );
-                  })
-                ],
-              ),
+  padding: const EdgeInsets.only(top: 10, bottom: 10),
+  child: ExpansionTile(
+    title: const Text(
+      "Créditos",
+      style: TextStyle(fontFamily: 'Bree'),
+    ),
+    children: [
+      Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            padding: const EdgeInsets.all(16),
+            alignment: Alignment.centerLeft,
+            child: const Text(
+              "• Projeto idealizado pelo professor Fred de Ciências Contábeis e auxiliado pelo professor Elvio de Ciência da Computação.",
+              textAlign: TextAlign.left,
             ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: Image.asset("assets/img/Ciencia_da_Computacao.png"),
+          ),
+          // Adicione mais elementos conforme necessário
+        ],
+      ),
+    ],
+  ),
+)
+
           ],
         ),
       ),

@@ -69,6 +69,8 @@ flutter:
     - assets/img/MyCoinPNG.png
     - assets/img/FirstImage.png
     - assets/img/Icon.png
+    - assets/img/Ciencia_da_Computacao.png
+    - assets/img/IconLivro.png
 
   fonts:
     - family: Bree

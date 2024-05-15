@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:my_coin2/pages/calcPage.dart';
 import 'package:my_coin2/pages/guidePage.dart';
 import 'package:my_coin2/pages/hitsPage.dart';
-import 'package:my_coin2/pages/homeHomePage.dart';
 import 'package:my_coin2/pages/infoPage.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
@@ -40,8 +39,7 @@ class _HomePageState extends State<HomePage> {
       body: PageView(
         physics: const NeverScrollableScrollPhysics(),
         controller: pc,
-        children: const [
-          HomeHome(),
+        children: const [  
           GuidePage(),
           CalcPage(),
           HitsPage(),
@@ -58,24 +56,12 @@ class _HomePageState extends State<HomePage> {
           color: Color.fromARGB(255, 119, 0, 0),
           gap: 8,
           tabs: [
-            // Botões de navegação na parte inferior
-            GButton(
-              icon: Icons.home,
-              text: 'Home',
-              onPressed: () {
-                setState(() {
-                  paginaAtual = 0;
-                  // Anima a transição para a página atual
-                  pc.animateToPage(paginaAtual, duration: const Duration(milliseconds: 200), curve: Curves.linear);
-                });
-              },
-            ),
             GButton(
               icon: Icons.book,
               text: 'Guia',
               onPressed: () {
                 setState(() {
-                  paginaAtual = 1;
+                  paginaAtual = 0;
                   pc.animateToPage(paginaAtual, duration: const Duration(milliseconds: 200), curve: Curves.linear);
                 });
               },
@@ -85,7 +71,7 @@ class _HomePageState extends State<HomePage> {
               text: 'Calculadora',
               onPressed: () {
                 setState(() {
-                  paginaAtual = 2;
+                  paginaAtual = 1;
                   pc.animateToPage(paginaAtual, duration: const Duration(milliseconds: 200), curve: Curves.linear);
                 });
               },
@@ -95,7 +81,7 @@ class _HomePageState extends State<HomePage> {
               text: 'Dicas',
               onPressed: () {
                 setState(() {
-                  paginaAtual = 3;
+                  paginaAtual = 2;
                   pc.animateToPage(paginaAtual, duration: const Duration(milliseconds: 200), curve: Curves.linear);
                 });
               },
@@ -105,7 +91,7 @@ class _HomePageState extends State<HomePage> {
               text: 'info',
               onPressed: () {
                 setState(() {
-                  paginaAtual = 4;
+                  paginaAtual = 3;
                   pc.animateToPage(paginaAtual, duration: const Duration(milliseconds: 200), curve: Curves.linear);
                 });
               },

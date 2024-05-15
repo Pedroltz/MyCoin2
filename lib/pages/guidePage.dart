@@ -24,16 +24,6 @@ class _GuidePageState extends State<GuidePage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const Padding(
-              padding: EdgeInsets.only(bottom: 24),
-              child: Text(
-                "Primeiro Modulo",
-                style: TextStyle(
-                  fontSize: 22,
-                  fontFamily: "Bree",
-                ),
-              ),
-            ),
             GestureDetector(
               onTap: () {
                 Navigator.push(

@@ -49,7 +49,7 @@ class _FirstState extends State<First> {
               const Padding(
                 padding: EdgeInsets.only(bottom: 45, left: 20, right: 30),
                 child: Text(
-                  "Aprena com assuntos do dia a dia sobre gestão financeira pessoal",
+                  "Aprenda com assuntos do dia a dia sobre gestão financeira pessoal",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                       color: Colors.white,

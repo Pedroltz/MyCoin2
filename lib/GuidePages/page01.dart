@@ -59,11 +59,9 @@ class _GuidePage01State extends State<GuidePage01> {
                   child: ElevatedButton(
                     onPressed: () {
                       Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const Quiz01(),
-                        ),
-                      );
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Quiz01()));
                     },
                     child: const Text(
                       "Quiz",

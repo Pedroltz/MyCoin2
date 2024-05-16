@@ -4,7 +4,7 @@ List quiz1 = [
     "anwser": [
       "Para impressionar os outros com sua estabilidade financeira.",
       "Para garantir que você tenha dinheiro para comprar tudo.",
-      "Para tomar decisões financeiras mais conscientes e informadas."
+      "Para tomar decisões financeiras mais conscientes"
     ],
     "correct": 2
   },

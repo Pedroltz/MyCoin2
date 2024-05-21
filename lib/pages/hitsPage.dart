@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class HitsPage extends StatefulWidget {
   const HitsPage({Key? key}) : super(key: key);
@@ -9,25 +8,13 @@ class HitsPage extends StatefulWidget {
 }
 
 class _HitsPageState extends State<HitsPage> {
-
-  final Uri _linkExame = Uri.parse('https://exame.com/');
-  final Uri _linkInfoMoney = Uri.parse('https://www.infomoney.com.br/');
-  final Uri _linkBancoCentralDoBrasil = Uri.parse('https://www.bcb.gov.br/');
-
-  Future<void> _launchUrl(Uri url) async {
-    if (await canLaunchUrl(url)) {
-      await launchUrl(url);
-    } else{
-      throw 'Could not launch $url';
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        color: Colors.white,
         width: double.infinity,
-        padding: const EdgeInsets.all(13),
+        padding: const EdgeInsets.all(15),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -37,116 +24,78 @@ class _HitsPageState extends State<HitsPage> {
                 style: TextStyle(
                   fontFamily: 'Bree',
                   fontSize: 30,
+                  color: Colors.red,
                 ),
               ),
               const Padding(
                 padding: EdgeInsets.only(top: 20, bottom: 5),
-                child: Divider(),
+                child: Divider(color: Colors.red),
               ),
               const Text(
                 'Bem-vindo à aba de Dicas do app MyCoin 2.0! Aqui você encontrará uma coleção abrangente de dicas relacionadas a onde você pode aprender mais sobre como administrar seu dinheiro de forma correta e confiável.',
                 textAlign: TextAlign.center,
+                style: TextStyle(color: Colors.black),
               ),
               const Padding(
                 padding: EdgeInsets.only(top: 5, bottom: 20),
-                child: Divider(),
+                child: Divider(color: Colors.red),
               ),
-              Padding(
-                padding: const EdgeInsets.only(top:10, bottom: 10),
-                child: ExpansionTile(
-                  title: const Text(
-                    "Canais do YouTube",
-                    style: TextStyle(
-                      fontFamily: 'Bree'
-                    ),
-                  ),
-                  children: [
-                    Builder(builder: (BuildContext context) {
-                      return Container(
-                        padding: const EdgeInsets.only(bottom: 18),
-                        alignment: Alignment.centerLeft,
-                        child: const Text("• Me Poupe!\n• O Primo Rico\n• Dinheiro Com Você"),
-                      );
-                    })
-                  ],
-                ),
+              _buildTipCard(
+                title: "Canais do YouTube",
+                icon: Icons.video_library,
+                content: "• Me Poupe!\n• O Primo Rico\n• Dinheiro Com Você",
               ),
-              Padding(
-                padding: const EdgeInsets.only(top:10, bottom: 10),
-                child: ExpansionTile(
-                  title: const Text(
-                    "Sites",
-                    style: TextStyle(
-                      fontFamily: 'Bree'
-                    ),
-                  ),
-                  children: [
-                    Builder(builder: (BuildContext context) {
-                      return Container(
-                        padding: const EdgeInsets.only(bottom: 18),
-                        alignment :Alignment.centerLeft,
-                        child:  Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            ElevatedButton(
-                              onPressed: () => _launchUrl(_linkExame),
-                              child: const Text(
-                                "Exame",
-                                style: TextStyle(
-                                  fontSize: 15,
-                                ),
-                              ),
-                            ),
-                            ElevatedButton(
-                              onPressed: () => _launchUrl(_linkInfoMoney),
-                              child: const Text(
-                                "InfoMoney",
-                                style: TextStyle(
-                                  fontSize: 15,
-                                ),
-                              ),
-                            ),
-                            ElevatedButton(
-                              onPressed: () => _launchUrl(_linkBancoCentralDoBrasil),
-                              child: const Text(
-                                "Banco Central do Brasil (BCB)",
-                                style: TextStyle(
-                                  fontSize: 15,
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-
-                      );
-                    })
-                  ],
-                ),
+              _buildTipCard(
+                title: "Sites",
+                icon: Icons.web,
+                content: "• Exame: https://exame.com/\n• InfoMoney: https://www.infomoney.com.br/\n• Banco Central do Brasil (BCB): https://www.bcb.gov.br/",
               ),
-              Padding(
-                padding: const EdgeInsets.only(top:10, bottom: 10),
-                child: ExpansionTile(
-                  title: const Text(
-                    "Cursos Gratuitos",
-                    style: TextStyle(
-                      fontFamily: 'Bree'
-                    ),
-                  ),
-                  children: [
-                    Builder(builder: (BuildContext context) {
-                      return Container(
-                        padding: const EdgeInsets.only(bottom: 18),
-                        alignment: Alignment.centerLeft,
-                        child: const Text("• Curso de Educação Financeira - Finanças para a Vida\n  Disponível em: *VEDUCA*\n\n• Curso de Finanças Pessoais e Investimentos\n  Disponível em: UNESP Aberta\n\n• Curso de Educação Financeira - Controle e Planejamento de Gastos\n  Disponível em: SEBRAE"),
-                      );
-                    })
-                  ],
-                ),
+              _buildTipCard(
+                title: "Cursos Gratuitos",
+                icon: Icons.school,
+                content: "• Curso de Educação Financeira - Finanças para a Vida\n  Disponível em: VEDUCA\n\n• Curso de Finanças Pessoais e Investimentos\n  Disponível em: UNESP Aberta\n\n• Curso de Educação Financeira - Controle e Planejamento de Gastos\n  Disponível em: SEBRAE",
               ),
             ],
-          ) ,
+          ),
         ),
       ),
     );
   }
+
+  Widget _buildTipCard({required String title, required IconData icon, String? content}) {
+    return Card(
+      margin: const EdgeInsets.symmetric(vertical: 10),
+      elevation: 5,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(15),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(15),
+        child: ExpansionTile(
+          leading: Icon(icon, color: Colors.red),
+          title: Text(
+            title,
+            style: const TextStyle(
+              fontFamily: 'Bree',
+              color: Colors.red,
+              fontSize: 20,
+            ),
+          ),
+          children: [
+            Container(
+              padding: const EdgeInsets.only(top: 10),
+              alignment: Alignment.centerLeft,
+              child: Text(content ?? '', style: const TextStyle(color: Colors.black)),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+void main() {
+  runApp(const MaterialApp(
+    home: HitsPage(),
+  ));
 }

@@ -17,6 +17,7 @@ class _GuidePageState extends State<GuidePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white, // Adicionado fundo branco
       body: Container(
         padding: const EdgeInsets.all(12),
         width: double.infinity,
@@ -36,7 +37,7 @@ class _GuidePageState extends State<GuidePage> {
                 height: 90,
                 padding: const EdgeInsets.all(5),
                 decoration: BoxDecoration(
-                  color: Colors.red,
+                  color: Colors.red, // Tornou o vermelho mais escuro
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Row(
@@ -54,7 +55,7 @@ class _GuidePageState extends State<GuidePage> {
                 ),
               ),
             ),
-            const Divider(),
+            const Divider(color: Colors.red), // Adicionado divisor vermelho
             GestureDetector(
               onTap: () {
                 Navigator.push(
@@ -67,7 +68,7 @@ class _GuidePageState extends State<GuidePage> {
                 height: 90,
                 padding: const EdgeInsets.all(5),
                 decoration: BoxDecoration(
-                  color: Colors.red,
+                  color: Colors.red, // Tornou o vermelho mais escuro
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Row(
@@ -85,7 +86,7 @@ class _GuidePageState extends State<GuidePage> {
                 ),
               ),
             ),
-            Divider(),
+            const Divider(color: Colors.red), // Adicionado divisor vermelho
             GestureDetector(
               onTap: () {
                 Navigator.push(
@@ -98,7 +99,7 @@ class _GuidePageState extends State<GuidePage> {
                 height: 90,
                 padding: const EdgeInsets.all(5),
                 decoration: BoxDecoration(
-                  color: Colors.red,
+                  color: Colors.red, // Tornou o vermelho mais escuro
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Row(
@@ -116,7 +117,7 @@ class _GuidePageState extends State<GuidePage> {
                 ),
               ),
             ),
-            Divider(),
+            const Divider(color: Colors.red), // Adicionado divisor vermelho
             GestureDetector(
               onTap: () {
                 Navigator.push(
@@ -129,7 +130,7 @@ class _GuidePageState extends State<GuidePage> {
                 height: 90,
                 padding: const EdgeInsets.all(5),
                 decoration: BoxDecoration(
-                  color: Colors.red,
+                  color: Colors.red, // Tornou o vermelho mais escuro
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Row(

@@ -4,19 +4,19 @@ import 'package:my_coin2/QuizPages/resume.dart';
 
 class Argumentos {
   final int acertos;
-  final int estado = 1;
+  final int estado = 2;
 
   Argumentos(this.acertos);
 }
 
-class Quiz01 extends StatefulWidget {
-  const Quiz01({super.key});
+class Quiz02 extends StatefulWidget {
+  const Quiz02({super.key});
 
   @override
-  State<Quiz01> createState() => _Quiz01State();
+  State<Quiz02> createState() => _Quiz02State();
 }
 
-class _Quiz01State extends State<Quiz01> {
+class _Quiz02State extends State<Quiz02> {
   int perguntaNumero = 0;
   int acertos = 0;
   int errors = 0;
@@ -24,12 +24,12 @@ class _Quiz01State extends State<Quiz01> {
   @override
   void initState() {
     super.initState();
-    quiz1.shuffle();  // Chame shuffle no initState para evitar múltiplos embaralhamentos
+    quiz2.shuffle();  // Chame shuffle no initState para evitar múltiplos embaralhamentos
   }
 
   void respondeu(int respostaNumero) {
     setState(() {
-      if (quiz1[perguntaNumero]['correct'] == respostaNumero) {
+      if (quiz2[perguntaNumero]['correct'] == respostaNumero) {
         print('acertou');
         acertos++;
       } else {
@@ -39,7 +39,7 @@ class _Quiz01State extends State<Quiz01> {
 
       print('Acertos totais: $acertos erros totais: $errors');
 
-      if (perguntaNumero == quiz1.length - 1) {
+      if (perguntaNumero == quiz2.length - 1) {
         print('Terminou o Quiz');
         Navigator.push(
           context,
@@ -59,7 +59,7 @@ class _Quiz01State extends State<Quiz01> {
       appBar: AppBar(
         backgroundColor: Colors.red,
         title: const Text(
-          "Quiz Capítulo 1",
+          "Quiz Capítulo 2",
           style: TextStyle(color: Colors.white, fontFamily: "Bree"),
         ),
         centerTitle: true,
@@ -73,7 +73,7 @@ class _Quiz01State extends State<Quiz01> {
             Padding(
               padding: EdgeInsets.only(top: 50),
               child: Text(
-                "${perguntaNumero + 1}/${quiz1.length}",
+                "${perguntaNumero + 1}/${quiz2.length}",
                 style: const TextStyle(
                     color: Colors.white, fontFamily: "Bree", fontSize: 23),
               ),
@@ -81,7 +81,7 @@ class _Quiz01State extends State<Quiz01> {
             Padding(
               padding: EdgeInsets.only(top: 100, left: 5, right: 5),
               child: Text(
-                quiz1[perguntaNumero]['questionText'],
+                quiz2[perguntaNumero]['questionText'],
                 textAlign: TextAlign.center,
                 style: const TextStyle(
                     color: Colors.white, fontFamily: "Bree", fontSize: 20),
@@ -102,7 +102,7 @@ class _Quiz01State extends State<Quiz01> {
                 child: Column(
                   children: [
                     for (var i = 0;
-                        i < quiz1[perguntaNumero]['anwser'].length;
+                        i < quiz2[perguntaNumero]['answer'].length;
                         i++)
                       Padding(
                         padding:
@@ -115,11 +115,11 @@ class _Quiz01State extends State<Quiz01> {
                               respondeu(i);
                             },
                             style: ButtonStyle(
-                              backgroundColor: MaterialStateProperty.all<Color>(
+                              backgroundColor: WidgetStateProperty.all<Color>(
                                   Colors.white),
                               foregroundColor:
-                                  MaterialStateProperty.all<Color>(Colors.red),
-                              shape: MaterialStateProperty.all<
+                                  WidgetStateProperty.all<Color>(Colors.red),
+                              shape: WidgetStateProperty.all<
                                   RoundedRectangleBorder>(
                                 RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(18.0),
@@ -129,7 +129,7 @@ class _Quiz01State extends State<Quiz01> {
                               ),
                             ),
                             child: Text(
-                              quiz1[perguntaNumero]['anwser'][i],
+                              quiz2[perguntaNumero]['answer'][i],
                               textAlign: TextAlign.center,
                               style: const TextStyle(
                                 fontSize: 20,

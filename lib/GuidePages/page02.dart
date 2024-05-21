@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
+import 'package:my_coin2/QuizPages/quiz02.dart';
 
 class GuidePage02 extends StatefulWidget {
   const GuidePage02({Key? key}) : super(key: key);
@@ -56,7 +57,12 @@ class _GuidePage02State extends State<GuidePage02> {
                   height: 60,
                   width: 300,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Quiz02()));
+                    },
                     child: const Text(
                       "Quiz",
                       style: TextStyle(

@@ -81,7 +81,7 @@ class _ResultadoState extends State<Resultado> {
                     shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                       RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(18.0),
-                        side: BorderSide(color: Colors.red, width: 2.0),
+                        side: const BorderSide(color: Colors.red, width: 2.0),
                       ),
                     ),
                   ),

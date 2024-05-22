@@ -147,6 +147,10 @@ class _InfoPageState extends State<InfoPage> {
             padding: const EdgeInsets.symmetric(horizontal: 16),
             child: Image.asset("assets/img/Ciencia_da_Computacao.png"),
           ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: Image.asset("assets/img/Coordenacao.png"),
+          ),
           // Adicione mais elementos conforme necessário
         ],
       ),

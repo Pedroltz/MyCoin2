@@ -14,6 +14,7 @@ class _HitsPageState extends State<HitsPage> {
       body: Container(
         color: Colors.white,
         width: double.infinity,
+        height: double.infinity,
         padding: const EdgeInsets.all(15),
         child: SingleChildScrollView(
           child: Column(

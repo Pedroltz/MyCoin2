@@ -4,7 +4,6 @@ import 'package:my_coin2/QuizPages/resume.dart';
 
 class Argumentos {
   final int acertos;
-  final int estado = 1;
 
   Argumentos(this.acertos);
 }

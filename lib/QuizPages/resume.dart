@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:my_coin2/QuizPages/quiz01.dart';
 import 'package:my_coin2/pages/homePage.dart';
 
 class Resultado extends StatefulWidget {
@@ -61,41 +60,6 @@ class _ResultadoState extends State<Resultado> {
               ),
             ),
             const SizedBox(height: 20.0),
-            Padding(
-              padding: const EdgeInsets.only(top: 15, bottom: 20),
-              child: SizedBox(
-                height: 65,
-                width: 330,
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const Quiz01()));
-                  },
-                  style: ButtonStyle(
-                    backgroundColor:
-                        WidgetStateProperty.all<Color>(Colors.white),
-                    foregroundColor:
-                        WidgetStateProperty.all<Color>(Colors.red),
-                    shape: WidgetStateProperty.all<RoundedRectangleBorder>(
-                      RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(18.0),
-                        side: const BorderSide(color: Colors.red, width: 2.0),
-                      ),
-                    ),
-                  ),
-                  child: const Text(
-                    "Jogar Novamente!",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Colors.red,
-                    ),
-                  ),
-                ),
-              ),
-            ),
             Padding(
               padding: const EdgeInsets.only(top: 0, bottom: 20),
               child: SizedBox(

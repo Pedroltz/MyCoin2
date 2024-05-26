@@ -54,7 +54,7 @@ class _GuidePage01State extends State<GuidePage01> {
                   fontSize: 15,
                 ),
               ),
-              SizedBox(height: 45),
+              const SizedBox(height: 45),
               Center(
                 child: SizedBox(
                   height: 60,

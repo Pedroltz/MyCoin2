@@ -3,8 +3,8 @@ List quiz1 = [
     "questionText": "Qual é a importância de entender as receitas e despesas para a saúde financeira?",
     "answer": [
       "Para poder gastar dinheiro sem preocupações.",
-      "Para garantir que os ganhos superem os gastos e permitir poupar.",
-      "Para impressionar os outros com sua estabilidade financeira."
+      "Para garantir que os ganhos superem os gastos.",
+      "Para impressionar os outros com sua estabilidade."
     ],
     "correct": 1
   },
@@ -12,7 +12,7 @@ List quiz1 = [
     "questionText": "O que caracteriza uma receita?",
     "answer": [
       "Dinheiro recebido em troca de produtos ou serviços.",
-      "Qualquer entrada de dinheiro, independentemente da origem.",
+      "Qualquer entrada de dinheiro.",
       "Apenas salários e rendimentos de investimentos."
     ],
     "correct": 0
@@ -40,7 +40,7 @@ List quiz2 = [
   {
     "questionText": "O que é orçamento doméstico?",
     "answer": [
-      "Um método de planejamento que analisa receitas e despesas familiares.",
+      "Um planejamento que analisa receitas familiares.",
       "Uma forma de gastar dinheiro sem preocupação.",
       "Um sistema para acumular dívidas."
     ],
@@ -69,7 +69,7 @@ List quiz2 = [
     "answer": [
       "Para garantir que o dinheiro parado perca valor.",
       "Para acumular riqueza sem propósito.",
-      "Para proteger o poder de compra e aumentar o patrimônio."
+      "Para proteger o poder de compra e o patrimônio."
     ],
     "correct": 2
   }
@@ -89,7 +89,7 @@ List quiz3 = [
     "answer": [
       "Para evitar economizar dinheiro.",
       "Para gastar mais dinheiro em compras impulsivas.",
-      "Para garantir um crescimento consistente da reserva financeira."
+      "Para garantir um crescimento consistente."
     ],
     "correct": 2
   },
@@ -117,8 +117,8 @@ List quiz4 = [
     "questionText": "Por que é importante regularizar contas atrasadas?",
     "answer": [
       "Para acumular mais dívidas.",
-      "Para impressionar os outros com sua estabilidade financeira.",
-      "Para restaurar a estabilidade financeira e evitar repercussões adversas."
+      "Para impressionar os outros com sua estabilidade.",
+      "Para restaurar a estabilidade financeira."
     ],
     "correct": 2
   },
@@ -127,7 +127,7 @@ List quiz4 = [
     "answer": [
       "Ignorar as dívidas.",
       "Gastar mais dinheiro.",
-      "Negociar com os credores para planos de pagamento flexíveis."
+      "Negociar com os credores para planos de pagamento."
     ],
     "correct": 2
   },
@@ -136,7 +136,7 @@ List quiz4 = [
     "answer": [
       "Incentivando gastos impulsivos.",
       "Oferecendo dicas para acumular dívidas.",
-      "Usando ferramentas de gerenciamento financeiro e orçamentação."
+      "Usando ferramentas de gerenciamento financeiro."
     ],
     "correct": 2
   },

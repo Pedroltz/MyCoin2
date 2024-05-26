@@ -58,7 +58,7 @@ class _Quiz03State extends State<Quiz03> {
       appBar: AppBar(
         backgroundColor: Colors.red,
         title: const Text(
-          "Quiz Capítulo 1",
+          "Quiz Capítulo 3",
           style: TextStyle(color: Colors.white, fontFamily: "Bree"),
         ),
         centerTitle: true,

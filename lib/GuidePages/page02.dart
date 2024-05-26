@@ -19,7 +19,7 @@ class _GuidePage02State extends State<GuidePage02> {
         backgroundColor: Colors.red,
         centerTitle: true,
         title: const Text(
-          'Metas Financeiras',
+          'Despesas',
           style: TextStyle(fontFamily: 'Bree', color: Colors.white),
         ),
       ),
@@ -44,7 +44,10 @@ class _GuidePage02State extends State<GuidePage02> {
                 ),
               ),
               const Text(
-                'Estabelecer metas financeiras é fundamental para uma gestão eficaz de suas finanças pessoais. Em nosso aplicativo de educação financeira, incentivamos a definição de metas de curto, médio e longo prazo, adaptadas às suas necessidades individuais. As metas de curto prazo, alcançáveis em até um ano, incluem a criação de um fundo de emergência ou a quitação de dívidas de curto prazo. Oferecemos ferramentas para acompanhar seu progresso e ajustar seu orçamento conforme necessário.\n\nAs metas de médio prazo, que abrangem um período de um a cinco anos, podem envolver objetivos como a compra de um carro novo ou a realização de um curso de especialização. Em nosso aplicativo, você pode estabelecer um plano de economia e investimento para alcançar essas metas de forma realista e eficiente. Por fim, as metas de longo prazo, que ultrapassam cinco anos, representam conquistas significativas, como aposentadoria confortável ou a construção de um patrimônio substancial.\n\nOferecemos recursos de planejamento de longo prazo, como calculadoras de aposentadoria e simuladores de investimento, para ajudá-lo a visualizar e alcançar esses objetivos ao longo do tempo. Ao estabelecer metas financeiras em nosso aplicativo, você desenvolve disciplina financeira, motivação e uma visão estruturada de sua jornada financeira. Acompanhar o progresso em direção a essas metas capacita você a fazer escolhas financeiras mais inteligentes, alinhadas com seus valores e aspirações, transformando seus sonhos financeiros em realidade.',
+                'Orçamento doméstico é um método de planejamento financeiro que analisa todas as receitas e despesas de uma família. O orçamento doméstico permite identificar onde o dinheiro está sendo gasto, o que pode ser cortado e o que é essencial. Isso ajuda a criar uma reserva de emergência e a investir no futuro.\n\n'
+                'Definir metas financeiras e controlar as finanças com disciplina são passos cruciais para um orçamento eficaz. Isso permite alcançar objetivos de curto, médio e longo prazo. Além disso, um bom orçamento doméstico pode ajudar a evitar dívidas desnecessárias e a manter um bom histórico de crédito.\n\n'
+                'O orçamento doméstico também envolve a compreensão dos riscos financeiros e a criação de um plano para lidar com situações imprevistas. Isso pode incluir a perda de emprego, despesas médicas inesperadas ou reparos domésticos de emergência.\n\n'
+                'Finalmente, o orçamento doméstico é uma ferramenta essencial para a educação financeira das crianças. Ao envolver toda a família no processo de orçamento, as crianças podem aprender sobre a importância da poupança, do investimento e do planejamento financeiro desde cedo.',
                 style: TextStyle(
                   color: Colors.white,
                   fontFamily: 'Libre',
@@ -61,7 +64,7 @@ class _GuidePage02State extends State<GuidePage02> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => Quiz02()));
+                              builder: (context) => const Quiz02()));
                     },
                     child: const Text(
                       "Quiz",

@@ -19,7 +19,7 @@ class _GuidePage01State extends State<GuidePage01> {
         backgroundColor: Colors.red,
         centerTitle: true,
         title: const Text(
-          'Gastos e Ganhos',
+          'Orçamento Doméstico',
           style: TextStyle(fontFamily: 'Bree', color: Colors.white),
         ),
       ),
@@ -44,14 +44,17 @@ class _GuidePage01State extends State<GuidePage01> {
                 ),
               ),
               const Text(
-                'Entender seus gastos e ganhos é fundamental para uma saúde financeira sólida. Isso envolve saber exatamente quanto dinheiro está entrando em sua conta bancária, considerando todas as fontes de renda. Além disso, é essencial compreender onde seu dinheiro está sendo gasto, monitorando e categorizando cuidadosamente suas despesas.\n\nAo ter uma visão clara de seus gastos e ganhos, você pode tomar decisões financeiras mais conscientes e informadas. Isso pode incluir cortar gastos desnecessários, criar um fundo de emergência ou aumentar seus investimentos. A educação financeira capacita você a tomar o controle de suas finanças e trabalhar em direção aos seus objetivos financeiros.\n\nEm última análise, entender seus gastos e ganhos não é apenas sobre números, mas também sobre cultivar uma mentalidade financeira saudável. Ao adotar práticas de gestão financeira responsável, você constrói as bases para uma vida de estabilidade e prosperidade financeira, garantindo um futuro financeiramente estável para si mesmo.',
+                'Entender as receitas e despesas é crucial para a saúde financeira. A receita é todo tipo de dinheiro recebido em troca de produtos ou serviços. Isso pode incluir salário, rendimento de aplicações financeiras, aluguel recebido, entre outros. É essencial monitorar as receitas para entender o fluxo de dinheiro e planejar adequadamente.\n\n'
+                'As despesas, por outro lado, são os pagamentos necessários para manter o patrimônio ou atividade. Elas podem ser fixas, como aluguel e contas de serviços, que são previsíveis e ocorrem regularmente. Ou podem ser variáveis, como alimentação e transporte, que oscilam conforme o consumo e podem ser ajustadas conforme necessário.\n\n'
+                'Controlar as despesas é fundamental para garantir que os gastos não superem os ganhos. Isso envolve o rastreamento de todas as despesas, a categorização adequada e a identificação de áreas onde os cortes podem ser feitos. Isso permite poupar e investir para alcançar objetivos financeiros.\n\n'
+                'Além disso, entender as receitas e despesas permite criar um orçamento eficaz. Um orçamento ajuda a visualizar o fluxo de dinheiro e a tomar decisões financeiras informadas. Isso pode incluir a definição de metas de poupança, a alocação de dinheiro para investimentos e a preparação para despesas futuras. Com um bom entendimento das receitas e despesas, é possível viver dentro de seus meios, evitar dívidas e construir riqueza ao longo do tempo.',
                 style: TextStyle(
                   color: Colors.white,
                   fontFamily: 'Libre',
                   fontSize: 15,
                 ),
               ),
-              SizedBox(height: 45), // removido a vírgula aqui
+              SizedBox(height: 45),
               Center(
                 child: SizedBox(
                   height: 60,
@@ -61,7 +64,7 @@ class _GuidePage01State extends State<GuidePage01> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => Quiz01()));
+                              builder: (context) => const Quiz01()));
                     },
                     child: const Text(
                       "Quiz",

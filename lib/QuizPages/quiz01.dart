@@ -23,7 +23,7 @@ class _Quiz01State extends State<Quiz01> {
   @override
   void initState() {
     super.initState();
-    quiz1.shuffle();  // Chame shuffle no initState para evitar múltiplos embaralhamentos
+    quiz1.shuffle(); 
   }
 
   void respondeu(int respostaNumero) {
@@ -101,7 +101,7 @@ class _Quiz01State extends State<Quiz01> {
                 child: Column(
                   children: [
                     for (var i = 0;
-                        i < quiz1[perguntaNumero]['anwser'].length;
+                        i < quiz1[perguntaNumero]['answer'].length;
                         i++)
                       Padding(
                         padding:
@@ -128,7 +128,7 @@ class _Quiz01State extends State<Quiz01> {
                               ),
                             ),
                             child: Text(
-                              quiz1[perguntaNumero]['anwser'][i],
+                              quiz1[perguntaNumero]['answer'][i],
                               textAlign: TextAlign.center,
                               style: const TextStyle(
                                 fontSize: 20,

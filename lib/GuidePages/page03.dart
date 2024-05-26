@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_coin2/QuizPages/quiz03.dart';
 
 class GuidePage03 extends StatefulWidget {
   const GuidePage03({Key? key}) : super(key: key);
@@ -41,7 +42,10 @@ class _GuidePage03State extends State<GuidePage03> {
                 ),
               ),
               const Text(
-                'Em nosso aplicativo de educação financeira, enfatizamos a importância de criar uma reserva financeira como parte fundamental de uma gestão financeira saudável. Recomendamos estabelecer uma meta inicial de economizar de três a seis meses de despesas essenciais, como moradia e alimentação, como colchão de segurança contra imprevistos. O aplicativo ajuda a calcular esse valor e define um plano de economia realista para alcançá-lo gradualmente.\n\nAutomatizar suas economias é essencial para garantir o crescimento consistente da sua reserva financeira. Configure transferências automáticas para direcionar parte de sua receita para essa finalidade assim que receber seu salário ou renda. Isso garante uma abordagem disciplinada e constante para a construção de sua reserva, mesmo diante de tentações de gastos.\n\nAlém disso, nosso aplicativo oferece insights sobre otimização de despesas e planejamento financeiro. Por meio de ferramentas de análise de gastos, você pode identificar áreas onde cortar despesas desnecessárias e redirecionar esses recursos para sua reserva financeira. Assim, você pode construir gradualmente um fundo de emergência que proporciona segurança e liberdade financeira, preparando-o para enfrentar qualquer imprevisto com confiança e tranquilidade.',
+                'As despesas podem ser categorizadas em duas principais categorias: fixas e variáveis. As despesas fixas são aquelas que se repetem todo mês com valores previsíveis, como aluguel, plano de saúde, mensalidades escolares e pagamentos de empréstimos. Estas são despesas que geralmente não mudam de mês para mês e são essenciais para o seu bem-estar e sobrevivência.\n\n'
+                'Por outro lado, as despesas variáveis oscilam conforme o consumo, como alimentação, transporte, lazer e compras de roupas. Estas são despesas que podem mudar de mês para mês e muitas vezes têm um grau de flexibilidade.\n\n'
+                'Controlar as despesas fixas e variáveis é essencial para manter uma vida financeira saudável e atingir metas financeiras. Isso envolve monitorar suas despesas, identificar padrões de gastos e fazer ajustes conforme necessário. Isso pode envolver a redução de despesas desnecessárias, a renegociação de contratos de serviços ou a busca de alternativas mais econômicas.\n\n'
+                'Automatizar as economias é uma estratégia eficaz para garantir um crescimento consistente da reserva financeira. Isso pode envolver a configuração de transferências automáticas para uma conta poupança ou investimento, ou o uso de aplicativos que arredondam suas compras para o real mais próximo e investem a diferença. Isso ajuda a se preparar para imprevistos e a construir um futuro financeiro seguro.',
                 style: TextStyle(
                   color: Colors.white,
                   fontFamily: 'Libre',
@@ -54,7 +58,12 @@ class _GuidePage03State extends State<GuidePage03> {
                   height: 60,
                   width: 300,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Quiz03()));
+                    },
                     child: const Text(
                       "Quiz",
                       style: TextStyle(

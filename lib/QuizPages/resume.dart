@@ -14,7 +14,7 @@ class Resultado extends StatefulWidget {
 class _ResultadoState extends State<Resultado> {
   @override
   Widget build(BuildContext context) {
-    bool isSuccess = widget.acertos > 3;
+    bool isSuccess = widget.acertos >= 3;
 
     return Scaffold(
       appBar: AppBar(

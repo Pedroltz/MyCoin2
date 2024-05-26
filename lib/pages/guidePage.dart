@@ -46,7 +46,7 @@ class _GuidePageState extends State<GuidePage> {
                       padding: const EdgeInsets.only(left: 10, right: 10),
                       child: Image.asset("assets/img/IconLivro.png"),
                     ),
-                    const Text("Capítulo 1\nGastos e Ganhos",
+                    const Text("Capítulo 1\nReceitas e Despesas",
                         style: TextStyle(
                             fontSize: 20,
                             fontFamily: 'Bree',
@@ -77,7 +77,7 @@ class _GuidePageState extends State<GuidePage> {
                       padding: EdgeInsets.only(left: 10, right: 10),
                       child: Image.asset("assets/img/IconLivro.png"),
                     ),
-                    const Text("Capítulo 2\nMetas Financeiras",
+                    const Text("Capítulo 2\nOrçamento Doméstico",
                         style: TextStyle(
                             fontSize: 20,
                             fontFamily: 'Bree',
@@ -108,7 +108,7 @@ class _GuidePageState extends State<GuidePage> {
                       padding: EdgeInsets.only(left: 10, right: 10),
                       child: Image.asset("assets/img/IconLivro.png"),
                     ),
-                    const Text("Capítulo 3\nReserva de Emergencia",
+                    const Text("Capítulo 3\nContas Atrasadas e Gestão",
                         style: TextStyle(
                             fontSize: 20,
                             fontFamily: 'Bree',

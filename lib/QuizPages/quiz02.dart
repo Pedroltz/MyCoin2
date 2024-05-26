@@ -23,7 +23,7 @@ class _Quiz02State extends State<Quiz02> {
   @override
   void initState() {
     super.initState();
-    quiz2.shuffle();  // Chame shuffle no initState para evitar múltiplos embaralhamentos
+    quiz2.shuffle();  
   }
 
   void respondeu(int respostaNumero) {

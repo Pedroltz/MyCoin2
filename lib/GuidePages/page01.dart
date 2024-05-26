@@ -19,7 +19,7 @@ class _GuidePage01State extends State<GuidePage01> {
         backgroundColor: Colors.red,
         centerTitle: true,
         title: const Text(
-          'Orçamento Doméstico',
+          'Receitas e Despesas',
           style: TextStyle(fontFamily: 'Bree', color: Colors.white),
         ),
       ),

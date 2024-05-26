@@ -17,7 +17,7 @@ class _GuidePage03State extends State<GuidePage03> {
         backgroundColor: Colors.red,
         centerTitle: true,
         title: const Text(
-          'Reserva de Emergência',
+          'Contas Atrasadas e Gestão',
           style: TextStyle(fontFamily: 'Bree', color: Colors.white),
         ),
       ),

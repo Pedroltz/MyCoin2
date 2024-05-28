@@ -139,14 +139,16 @@ class _InfoPageState extends State<InfoPage> {
             padding: const EdgeInsets.all(16),
             alignment: Alignment.centerLeft,
             child: const Text(
-              "• Projeto idealizado pelo professor Fred de Ciências Contábeis e auxiliado pelo professor Elvio de Ciência da Computação.",
+              "• Projeto idealizado pelo professor Prof. Me. Fred Aparecido Matano de Ciências Contábeis e auxiliado pelo Prof. Dr. Elvio Gilberto da Silva de Ciência da Computação.",
               textAlign: TextAlign.left,
             ),
           ),
+          Text("Desenvolvimento:"),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
             child: Image.asset("assets/img/Ciencia_da_Computacao.png"),
           ),
+          Text("Apoio:"),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
             child: Image.asset("assets/img/Coordenacao.png"),

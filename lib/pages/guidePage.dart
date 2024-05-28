@@ -39,6 +39,7 @@ class _GuidePageState extends State<GuidePage> {
                 title: "Capítulo 1\nReceitas e Despesas",
                 page: GuidePage01(),
               ),
+              
               const SizedBox(height: 16),
               _buildGuideCard(
                 context,

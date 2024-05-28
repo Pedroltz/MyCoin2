@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:my_coin2/GuidePages/page01.dart';
 import 'package:my_coin2/GuidePages/page02.dart';
 import 'package:my_coin2/GuidePages/page03.dart';
@@ -17,137 +16,94 @@ class _GuidePageState extends State<GuidePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white, // Adicionado fundo branco
-      body: Container(
-        padding: const EdgeInsets.all(12),
+      backgroundColor: Colors.white,
+      body: SingleChildScrollView(
+        child: Container(
+          padding: const EdgeInsets.all(16),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Text(
+                'Guia de Educação Financeira',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontFamily: 'Bree',
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.red,
+                ),
+              ),
+              const SizedBox(height: 24),
+              _buildGuideCard(
+                context,
+                title: "Capítulo 1\nReceitas e Despesas",
+                page: GuidePage01(),
+              ),
+              const SizedBox(height: 16),
+              _buildGuideCard(
+                context,
+                title: "Capítulo 2\nOrçamento Doméstico",
+                page: GuidePage02(),
+              ),
+              const SizedBox(height: 16),
+              _buildGuideCard(
+                context,
+                title: "Capítulo 3\nContas Atrasadas e Gestão",
+                page: GuidePage03(),
+              ),
+              const SizedBox(height: 16),
+              _buildGuideCard(
+                context,
+                title: "Capítulo 4\nContas Atrasadas",
+                page: GuidePage04(),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildGuideCard(BuildContext context, {required String title, required Widget page}) {
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => page),
+        );
+      },
+      child: Container(
         width: double.infinity,
-        height: double.infinity,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
+        padding: const EdgeInsets.all(16),
+        decoration: BoxDecoration(
+          color: Colors.red,
+          borderRadius: BorderRadius.circular(12),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(0.5),
+              spreadRadius: 2,
+              blurRadius: 5,
+              offset: Offset(0, 3), // changes position of shadow
+            ),
+          ],
+        ),
+        child: Row(
           children: [
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const GuidePage01()));
-              },
-              child: Container(
-                width: double.infinity,
-                height: 90,
-                padding: const EdgeInsets.all(5),
-                decoration: BoxDecoration(
-                  color: Colors.red, // Tornou o vermelho mais escuro
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10, right: 10),
-                      child: Image.asset("assets/img/IconLivro.png"),
-                    ),
-                    const Text("Capítulo 1\nReceitas e Despesas",
-                        style: TextStyle(
-                            fontSize: 20,
-                            fontFamily: 'Bree',
-                            color: Colors.white))
-                  ],
+            Padding(
+              padding: const EdgeInsets.only(right: 16),
+              child: Image.asset("assets/img/IconLivro.png", width: 40, height: 40),
+            ),
+            Expanded(
+              child: Text(
+                title,
+                style: TextStyle(
+                  fontSize: 20,
+                  fontFamily: 'Bree',
+                  color: Colors.white,
                 ),
               ),
             ),
-            const Divider(color: Colors.red), // Adicionado divisor vermelho
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const GuidePage02()));
-              },
-              child: Container(
-                width: double.infinity,
-                height: 90,
-                padding: const EdgeInsets.all(5),
-                decoration: BoxDecoration(
-                  color: Colors.red, // Tornou o vermelho mais escuro
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: Row(
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.only(left: 10, right: 10),
-                      child: Image.asset("assets/img/IconLivro.png"),
-                    ),
-                    const Text("Capítulo 2\nOrçamento Doméstico",
-                        style: TextStyle(
-                            fontSize: 20,
-                            fontFamily: 'Bree',
-                            color: Colors.white))
-                  ],
-                ),
-              ),
-            ),
-            const Divider(color: Colors.red), // Adicionado divisor vermelho
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const GuidePage03()));
-              },
-              child: Container(
-                width: double.infinity,
-                height: 90,
-                padding: const EdgeInsets.all(5),
-                decoration: BoxDecoration(
-                  color: Colors.red, // Tornou o vermelho mais escuro
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: Row(
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.only(left: 10, right: 10),
-                      child: Image.asset("assets/img/IconLivro.png"),
-                    ),
-                    const Text("Capítulo 3\nContas Atrasadas e Gestão",
-                        style: TextStyle(
-                            fontSize: 20,
-                            fontFamily: 'Bree',
-                            color: Colors.white))
-                  ],
-                ),
-              ),
-            ),
-            const Divider(color: Colors.red), // Adicionado divisor vermelho
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const GuidePage04()));
-              },
-              child: Container(
-                width: double.infinity,
-                height: 90,
-                padding: const EdgeInsets.all(5),
-                decoration: BoxDecoration(
-                  color: Colors.red, // Tornou o vermelho mais escuro
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: Row(
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.only(left: 10, right: 10),
-                      child: Image.asset("assets/img/IconLivro.png"),
-                    ),
-                    const Text("Capítulo 4\nContas Atrasadas",
-                        style: TextStyle(
-                            fontSize: 20,
-                            fontFamily: 'Bree',
-                            color: Colors.white))
-                  ],
-                ),
-              ),
-            ),
+            Icon(Icons.arrow_forward_ios, color: Colors.white),
           ],
         ),
       ),

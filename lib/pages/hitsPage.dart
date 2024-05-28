@@ -24,7 +24,7 @@ class _HitsPageState extends State<HitsPage> {
                 'Dicas',
                 style: TextStyle(
                   fontFamily: 'Bree',
-                  fontSize: 30,
+                  fontSize: 24, // Diminui o tamanho da fonte (Original: 30)
                   color: Colors.red,
                 ),
               ),
@@ -71,15 +71,15 @@ class _HitsPageState extends State<HitsPage> {
         borderRadius: BorderRadius.circular(15),
       ),
       child: Padding(
-        padding: const EdgeInsets.all(15),
+        padding: const EdgeInsets.all(12), // Diminui o padding (Original: 15)
         child: ExpansionTile(
-          leading: Icon(icon, color: Colors.red),
+          leading: Icon(icon, color: Colors.red, size: 24), // Diminui o tamanho do ícone (Original: sem tamanho especificado)
           title: Text(
             title,
             style: const TextStyle(
               fontFamily: 'Bree',
               color: Colors.red,
-              fontSize: 20,
+              fontSize: 16, // Diminui o tamanho da fonte (Original: 20)
             ),
           ),
           children: [

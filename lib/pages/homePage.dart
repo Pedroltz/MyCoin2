@@ -39,7 +39,7 @@ class _HomePageState extends State<HomePage> {
       body: PageView(
         physics: const NeverScrollableScrollPhysics(),
         controller: pc,
-        children: const [  
+        children: const [
           GuidePage(),
           CalcPage(),
           HitsPage(),
@@ -47,13 +47,13 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       bottomNavigationBar: SizedBox(
-        height: 73,
+        height: 60, // Reduz a altura do contêiner do GNav
         child: GNav(
           backgroundColor: Colors.red,
-          tabBackgroundColor: Color.fromARGB(255, 248, 93, 82),
+          tabBackgroundColor: const Color.fromARGB(255, 248, 93, 82),
           activeColor: Colors.white,
-          padding: EdgeInsets.all(16),
-          color: Color.fromARGB(255, 119, 0, 0),
+          padding: const EdgeInsets.all(16),
+          color: const Color.fromARGB(255, 119, 0, 0),
           gap: 8,
           tabs: [
             GButton(

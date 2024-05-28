@@ -10,7 +10,6 @@ class PaymentScreen extends StatefulWidget {
 }
 
 class _PaymentScreenState extends State<PaymentScreen> {
-
   TextEditingController reservaController = TextEditingController();
   double saldo = 0;
 
@@ -86,7 +85,9 @@ class _PaymentScreenState extends State<PaymentScreen> {
             const SizedBox(height: 16),
             ElevatedButton(
               onPressed: () {
-                double reserva = double.tryParse(reservaController.text) ?? 0;
+                // Substituir a vírgula por ponto antes de converter para double
+                String reservaText = reservaController.text.replaceAll(',', '.');
+                double reserva = double.tryParse(reservaText) ?? 0;
                 double valorItens = valorTotal;
                 setState(() {
                   saldo = reserva - valorItens;
@@ -102,7 +103,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                   fontFamily: 'Bree',
                   fontSize: 18,
                 ),
-                ),
+              ),
             ),
             const SizedBox(height: 16),
             Text(

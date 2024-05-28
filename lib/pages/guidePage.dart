@@ -28,7 +28,7 @@ class _GuidePageState extends State<GuidePage> {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontFamily: 'Bree',
-                  fontSize: 24,
+                  fontSize: 20, // Diminui o tamanho da fonte
                   fontWeight: FontWeight.bold,
                   color: Colors.red,
                 ),
@@ -48,7 +48,7 @@ class _GuidePageState extends State<GuidePage> {
               const SizedBox(height: 16),
               _buildGuideCard(
                 context,
-                title: "Capítulo 3\nContas Atrasadas e Gestão",
+                title: "Capítulo 3\nGestão e suas Categorias",
                 page: GuidePage03(),
               ),
               const SizedBox(height: 16),
@@ -74,7 +74,7 @@ class _GuidePageState extends State<GuidePage> {
       },
       child: Container(
         width: double.infinity,
-        padding: const EdgeInsets.all(16),
+        padding: const EdgeInsets.all(12), // Diminui o padding
         decoration: BoxDecoration(
           color: Colors.red,
           borderRadius: BorderRadius.circular(12),
@@ -90,20 +90,20 @@ class _GuidePageState extends State<GuidePage> {
         child: Row(
           children: [
             Padding(
-              padding: const EdgeInsets.only(right: 16),
-              child: Image.asset("assets/img/IconLivro.png", width: 40, height: 40),
+              padding: const EdgeInsets.only(right: 12), // Diminui o padding
+              child: Image.asset("assets/img/IconLivro.png", width: 30, height: 30), // Diminui o tamanho do ícone
             ),
             Expanded(
               child: Text(
                 title,
                 style: TextStyle(
-                  fontSize: 20,
+                  fontSize: 16, // Diminui o tamanho da fonte
                   fontFamily: 'Bree',
                   color: Colors.white,
                 ),
               ),
             ),
-            Icon(Icons.arrow_forward_ios, color: Colors.white),
+            Icon(Icons.arrow_forward_ios, color: Colors.white, size: 16), // Diminui o tamanho do ícone
           ],
         ),
       ),

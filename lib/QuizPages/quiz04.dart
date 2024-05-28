@@ -23,7 +23,7 @@ class _Quiz04State extends State<Quiz04> {
   @override
   void initState() {
     super.initState();
-    quiz4.shuffle();  
+    quiz4.shuffle(); 
   }
 
   void respondeu(int respostaNumero) {
@@ -58,7 +58,7 @@ class _Quiz04State extends State<Quiz04> {
       appBar: AppBar(
         backgroundColor: Colors.red,
         title: const Text(
-          "Quiz Capítulo 4",
+          "Quiz Capítulo 1",
           style: TextStyle(color: Colors.white, fontFamily: "Bree"),
         ),
         centerTitle: true,
@@ -70,20 +70,20 @@ class _Quiz04State extends State<Quiz04> {
         child: Column(
           children: [
             Padding(
-              padding: EdgeInsets.only(top: 50),
+              padding: EdgeInsets.only(top: 40), 
               child: Text(
                 "${perguntaNumero + 1}/${quiz4.length}",
                 style: const TextStyle(
-                    color: Colors.white, fontFamily: "Bree", fontSize: 23),
+                    color: Colors.white, fontFamily: "Bree", fontSize: 20),
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: 100, left: 5, right: 5),
+              padding: EdgeInsets.only(top: 80, left: 10, right: 10), 
               child: Text(
                 quiz4[perguntaNumero]['questionText'],
                 textAlign: TextAlign.center,
                 style: const TextStyle(
-                    color: Colors.white, fontFamily: "Bree", fontSize: 20),
+                    color: Colors.white, fontFamily: "Bree", fontSize: 20), 
               ),
             ),
             const Spacer(),
@@ -97,7 +97,7 @@ class _Quiz04State extends State<Quiz04> {
               ),
               child: SizedBox(
                 width: double.infinity,
-                height: 350,
+                height: 280, 
                 child: Column(
                   children: [
                     for (var i = 0;
@@ -105,10 +105,10 @@ class _Quiz04State extends State<Quiz04> {
                         i++)
                       Padding(
                         padding:
-                            EdgeInsets.only(top: i == 0 ? 60 : 0, bottom: 20),
+                            EdgeInsets.only(top: i == 0 ? 40 : 0, bottom: 10), 
                         child: SizedBox(
-                          height: 65,
-                          width: 330,
+                          height: 60, 
+                          width: 300, 
                           child: ElevatedButton(
                             onPressed: () {
                               respondeu(i);
@@ -123,7 +123,7 @@ class _Quiz04State extends State<Quiz04> {
                                 RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(18.0),
                                   side:
-                                      const BorderSide(color: Colors.red, width: 2.0),
+                                      BorderSide(color: Colors.red, width: 2.0),
                                 ),
                               ),
                             ),
@@ -131,7 +131,7 @@ class _Quiz04State extends State<Quiz04> {
                               quiz4[perguntaNumero]['answer'][i],
                               textAlign: TextAlign.center,
                               style: const TextStyle(
-                                fontSize: 20,
+                                fontSize: 18, 
                                 color: Colors.red,
                               ),
                             ),
